@@ -1,0 +1,19 @@
+package com.te.cms.dto;
+
+import com.te.cms.entity.AddressType;
+import lombok.*;
+
+@NoArgsConstructor
+@AllArgsConstructor
+@Getter
+@Setter
+@Builder
+public class AddressDTO {
+
+    private String city;
+    private String state;
+    private AddressType addressType;
+   // private Student Student;
+
+
+}

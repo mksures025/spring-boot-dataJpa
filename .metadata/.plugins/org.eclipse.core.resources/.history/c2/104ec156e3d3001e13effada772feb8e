@@ -1,0 +1,13 @@
+package com.te.cms.response;
+
+import java.time.LocalDateTime;
+
+import org.springframework.http.HttpStatus;
+
+public class ErrorResponse {
+	
+	private String message;
+	private HttpStatus httpStatus;
+	private LocalDateTime dateTime;
+
+}

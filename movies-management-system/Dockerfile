@@ -1,0 +1,7 @@
+
+
+FROM eclipse-temurin:17
+COPY . /movies-management-system-0.0.1-SNAPSHOT.jar/app/movies-management-system.jar
+WORKDIR /app
+ENTRYPOINT ["java", "-jar","movies-management-system.jar"]
+

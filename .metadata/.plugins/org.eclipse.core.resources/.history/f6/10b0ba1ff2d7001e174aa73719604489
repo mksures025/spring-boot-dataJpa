@@ -1,0 +1,169 @@
+package com.te.cms.service;
+
+import com.te.cms.dto.AddressDTO;
+import com.te.cms.dto.DepartmentDTO;
+import com.te.cms.dto.StudentRegisterDTO;
+import com.te.cms.entity.Address;
+import com.te.cms.entity.Address.AddressBuilder;
+import com.te.cms.entity.Department;
+import com.te.cms.entity.Student;
+import com.te.cms.exceptionhandler.StudentNotFountException;
+import com.te.cms.repository.AddressRepository;
+import com.te.cms.repository.StudentRepository;
+import com.te.cms.util.StudentUtil;
+import lombok.RequiredArgsConstructor;
+
+import org.springframework.beans.BeanUtils;
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.stereotype.Service;
+
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Optional;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
+
+@Service
+@RequiredArgsConstructor
+public class StudentServiceImpl implements StudentService {
+
+	private final StudentRepository studentRepository;
+	private final AddressRepository addressRepository;
+
+	@Override
+	public String saveData(StudentRegisterDTO studentRegisterDTO) {
+
+		Student student = StudentUtil.convertStudentDTOToEntity(studentRegisterDTO);
+
+		studentRepository.save(student);
+		return student.getStudentId();
+	}
+
+	// update operations
+
+	// update student name
+
+	@Override
+	public String updateStudentName(StudentRegisterDTO studentRegisterDTO) {
+
+		Student student = studentRepository.findById(studentRegisterDTO.getStudentId())
+				.orElseThrow(() -> new StudentNotFountException("StudentId not found"));
+
+		studentRepository.updateStudentName(studentRegisterDTO.getStudentName(), studentRegisterDTO.getStudentId());
+
+		return student.getStudentName();
+
+	}
+
+	@Override
+	public String updateStudenrt(StudentRegisterDTO studentRegisterDTO) {
+
+		Student student = studentRepository.findById(studentRegisterDTO.getStudentId())
+				 .orElseThrow(() -> new StudentNotFountException("StudentId not found"));
+				
+		 
+	
+//		if (studentop.isPresent()) {
+//			for (Address address: studentop.get().getAddress()) {
+//				addressRepository.deleteById(address.getAddressId());
+//			}	
+//		}else {
+//			throw new StudentNotFountException("StudentId not found");
+//		}
+		 
+		 
+
+		student.setStudentAge(studentRegisterDTO.getStudentAge());
+		student.setStudentId(studentRegisterDTO.getStudentId());
+		student.setStudentName(studentRegisterDTO.getStudentName());
+		
+		student.setDepartment(Department.builder().DeptName(studentRegisterDTO.getDepartment().getDeptName())
+				.build());
+
+		List<Address> addresses = studentRegisterDTO
+				.getAddress().stream().map(address ->Address.builder().city(address.getCity())
+						.state(address.getState()).addressType(address.getAddressType()).student(student)
+						.build())
+				.collect(Collectors.toList());
+		
+		
+		
+		 
+		 
+		 
+	     for (Address address2 : addresses) { 
+	    	 
+	        System.out.println(address2.getCity());
+	        System.out.println(address2.getAddressId());
+			
+		}
+		
+		student.setAddress(addresses);
+		
+		
+//		List<Address> address=new ArrayList<Address>();
+//		Department department=new Department();
+//		
+//		BeanUtils.copyProperties(studentRegisterDTO,student );
+//		BeanUtils.copyProperties(studentRegisterDTO.getAddress(), address);
+//		BeanUtils.copyProperties(studentRegisterDTO.getDepartment(), department);
+//		
+//		student.setAddress(address);
+//		student.setDepartment(department);
+
+		Student studentData = studentRepository.save(students);
+
+		return studentData.getStudentName();
+	}
+
+	// fetch the data from database using query methods and @query
+
+	@Override
+	public StudentRegisterDTO fetchById(String studentid) {
+
+		Student student = studentRepository.findById(studentid)
+				.orElseThrow(() -> new StudentNotFountException("employeeId not found"));
+
+		StudentRegisterDTO studentRegisterDTO = StudentUtil.ConvertEntityToDTO(student);
+
+		return studentRegisterDTO;
+	}
+
+	@Override
+	public List<StudentRegisterDTO> fetchStudent() {
+
+		List<Student> student = studentRepository.findAll();
+
+		return student.stream().map(s -> StudentUtil.ConvertEntityToDTO(s)).toList();
+	}
+
+	// query Methods
+
+	@Override
+	public List<StudentRegisterDTO> fetchByName() {
+
+		List<Student> student = studentRepository.findByStudentName("sathish");
+
+		return student.stream().map(s -> StudentUtil.ConvertEntityToDTO(s)).toList();
+	}
+
+	@Override
+	public List<AddressDTO> fetchByAddress() {
+
+		List<Address> addresses = addressRepository.findByCity("Tanjavur");
+
+		return addresses.stream()
+				.map(a -> AddressDTO.builder().city(a.getCity()).state(a.getState()).addressType(a.getAddressType())
+						.student(StudentRegisterDTO.builder().studentAge(a.getStudent().getStudentAge())
+								.studentId(a.getStudent().getStudentId()).studentName(a.getStudent().getStudentName())
+								.department(DepartmentDTO.builder()
+										.DeptName(a.getStudent().getDepartment().getDeptName()).build())
+								.build())
+						.build())
+				.collect(Collectors.toList());
+	}
+	
+	
+
+}

@@ -1,0 +1,23 @@
+package com.te.cms.exceptionhandler;
+
+import java.time.LocalDateTime;
+
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+
+import com.te.cms.response.ErrorResponse;
+
+public class ApplicationExceptionHandler {
+	
+	public ResponseEntity<ErrorResponse>employeeNotFoundException(){
+		
+		
+		
+		
+		return ResponseEntity.<ErrorResponse>ofNullable(ErrorResponse.builder()
+				.message("employee not found from database")
+				.httpStatus(HttpStatus.NOT_FOUND).dateTime(LocalDateTime.now()).build());
+		
+	}
+
+}

@@ -1,0 +1,6 @@
+
+
+FROM eclipse-temurin:17
+COPY . /spring-boot-docker-demo-0.0.1-SNAPSHOT.jar/app/movies-management-system.jar
+WORKDIR /app
+ENTRYPOINT ["java", "-jar","movies-management-system.jar"]

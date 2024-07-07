@@ -1,0 +1,40 @@
+2024-04-08T09:41:02.779+05:30  INFO 17348 --- [movies-management-system] [main] c.t.m.m.s.r.MovieRepositoryTest          : Starting MovieRepositoryTest using Java 17.0.10 with PID 17348 (started by MSI in D:\TECHNO-ELEVATE\TRAINING\Spring-Boot-Movies\movies-management-system)
+2024-04-08T09:41:02.785+05:30  INFO 17348 --- [movies-management-system] [main] c.t.m.m.s.r.MovieRepositoryTest          : No active profile set, falling back to 1 default profile: "default"
+2024-04-08T09:41:03.870+05:30  INFO 17348 --- [movies-management-system] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-04-08T09:41:03.934+05:30  INFO 17348 --- [movies-management-system] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 52 ms. Found 1 JPA repository interface.
+2024-04-08T09:41:04.413+05:30  INFO 17348 --- [movies-management-system] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-04-08T09:41:04.549+05:30  INFO 17348 --- [movies-management-system] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
+2024-04-08T09:41:04.598+05:30  INFO 17348 --- [movies-management-system] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-04-08T09:41:04.933+05:30  INFO 17348 --- [movies-management-system] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-04-08T09:41:04.970+05:30  INFO 17348 --- [movies-management-system] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-04-08T09:41:05.539+05:30  INFO 17348 --- [movies-management-system] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@34beadce
+2024-04-08T09:41:05.542+05:30  INFO 17348 --- [movies-management-system] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-04-08T09:41:05.625+05:30  WARN 17348 --- [movies-management-system] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-04-08T09:41:05.628+05:30  WARN 17348 --- [movies-management-system] [main] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2024-04-08T09:41:06.651+05:30  INFO 17348 --- [movies-management-system] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-04-08T09:41:06.782+05:30  INFO 17348 --- [movies-management-system] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-04-08T09:41:07.357+05:30  WARN 17348 --- [movies-management-system] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-04-08T09:41:07.823+05:30  INFO 17348 --- [movies-management-system] [main] c.t.m.m.s.r.MovieRepositoryTest          : Started MovieRepositoryTest in 5.382 seconds (process running for 6.813)
+2024-04-08T09:41:08.545+05:30  INFO 17348 --- [movies-management-system] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-04-08T09:41:08.548+05:30  INFO 17348 --- [movies-management-system] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-04-08T09:41:08.558+05:30  INFO 17348 --- [movies-management-system] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-04-08T09:41:41.994+05:30  INFO 10328 --- [movies-management-system] [main] c.t.m.m.s.r.MovieRepositoryTest          : Starting MovieRepositoryTest using Java 17.0.10 with PID 10328 (started by MSI in D:\TECHNO-ELEVATE\TRAINING\Spring-Boot-Movies\movies-management-system)
+2024-04-08T09:41:41.996+05:30  INFO 10328 --- [movies-management-system] [main] c.t.m.m.s.r.MovieRepositoryTest          : No active profile set, falling back to 1 default profile: "default"
+2024-04-08T09:41:42.839+05:30  INFO 10328 --- [movies-management-system] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-04-08T09:41:42.932+05:30  INFO 10328 --- [movies-management-system] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 83 ms. Found 1 JPA repository interface.
+2024-04-08T09:41:43.450+05:30  INFO 10328 --- [movies-management-system] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-04-08T09:41:43.541+05:30  INFO 10328 --- [movies-management-system] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
+2024-04-08T09:41:43.595+05:30  INFO 10328 --- [movies-management-system] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-04-08T09:41:43.973+05:30  INFO 10328 --- [movies-management-system] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-04-08T09:41:44.009+05:30  INFO 10328 --- [movies-management-system] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-04-08T09:41:44.521+05:30  INFO 10328 --- [movies-management-system] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5f5c187d
+2024-04-08T09:41:44.523+05:30  INFO 10328 --- [movies-management-system] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-04-08T09:41:44.577+05:30  WARN 10328 --- [movies-management-system] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-04-08T09:41:44.578+05:30  WARN 10328 --- [movies-management-system] [main] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2024-04-08T09:41:45.661+05:30  INFO 10328 --- [movies-management-system] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-04-08T09:41:45.757+05:30  INFO 10328 --- [movies-management-system] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-04-08T09:41:46.481+05:30  WARN 10328 --- [movies-management-system] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-04-08T09:41:47.063+05:30  INFO 10328 --- [movies-management-system] [main] c.t.m.m.s.r.MovieRepositoryTest          : Started MovieRepositoryTest in 5.391 seconds (process running for 6.707)
+2024-04-08T09:41:47.931+05:30  INFO 10328 --- [movies-management-system] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-04-08T09:41:47.934+05:30  INFO 10328 --- [movies-management-system] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-04-08T09:41:47.945+05:30  INFO 10328 --- [movies-management-system] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

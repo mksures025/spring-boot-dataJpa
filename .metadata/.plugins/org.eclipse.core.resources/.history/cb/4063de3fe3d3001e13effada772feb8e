@@ -1,0 +1,5 @@
+package com.te.cms.response;
+
+public class ErrorResponse {
+
+}

@@ -1,0 +1,11 @@
+package com.te.cms.service;
+
+import com.te.cms.dto.StudentRegisterDTO;
+
+public interface StudentService {
+    String saveData(StudentRegisterDTO studentRegisterDTO);
+
+    String updateStudent(StudentRegisterDTO studentRegisterDTO);
+
+	StudentRegisterDTO fetchById(String studentid);
+}

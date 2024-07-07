@@ -1,0 +1,13 @@
+package com.te.cms.exceptionhandler;
+
+import org.springframework.http.ResponseEntity;
+
+import com.te.cms.response.ErrorResponse;
+
+public class ApplicationExceptionHandler {
+	
+	public ResponseEntity<ErrorResponse>employeeNotFoundException(){
+		
+	}
+
+}

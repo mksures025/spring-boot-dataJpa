@@ -1,0 +1,20 @@
+package com.te.cms.dto;
+
+import lombok.*;
+
+import java.util.List;
+
+
+@Builder
+@Setter
+@Getter
+public class StudentRegisterDTO{
+
+        String studentId;
+        String studentAge;
+       String studentName;
+        List<AddressDTO> address;
+        DepartmentDTO department;
+
+
+}
